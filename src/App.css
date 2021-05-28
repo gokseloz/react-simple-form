@@ -16,8 +16,7 @@ body {
 .form {
   background: #fff;
   max-width: 450px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   padding: 1rem 2rem;
   border-radius: .1rem;
   display: flex;
@@ -51,7 +50,7 @@ body {
   color: #fff;
   border-color: transparent;
   letter-spacing:  0.1rem;
-  padding: 0.15rem 0.25rem;
+  padding: 0.25rem;
   text-transform: capitalize;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -73,7 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 450px;
+  width: 450px;
   border-radius:  0.25rem;
   margin: .5rem;
   padding: 1rem 2rem;

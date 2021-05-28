@@ -29,7 +29,7 @@ const App = () => {
       person.phone &&
       person.preferredContact
     ) {
-      const newPerson = { ...person, id: new Date().getTime().toString() };
+      const newPerson = { ...person, id:new Date().getTime().toString()};
       setPeople([...people, newPerson]);
       setPerson({
         firstName: "",
@@ -38,12 +38,15 @@ const App = () => {
         phone: "",
         preferredContact: "",
       });
+      console.log(people)
+
 
       localStorage.setItem("people", JSON.stringify([...people, person]));
       setPressed(true);
       setTimeout(() => {
         setPressed(false);
       }, 100);
+
     } else {
       console.log("err");
     }
@@ -119,11 +122,10 @@ const App = () => {
           </button>
         </form>
         <div className="itemContainer">
-          {people.map((person) => {
-            const { id, firstName, lastName, email, phone, preferredContact } =
-              person;
+          {people.map((person, personIndex) => {
+            const { id, firstName, lastName, email, phone, preferredContact } = person;
             return (
-              <article className="item" key={id} tabIndex="0">
+              <article className="item" key={personIndex} tabIndex="0">
                 <p>
                   <span tabIndex="0">First Name:</span>
                   <span tabIndex="0">{firstName}</span>
